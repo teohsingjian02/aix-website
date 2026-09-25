@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AIX | Artificial Intelligence Transformation Centre</title>
+  <meta name="description" content="The Artificial Intelligence Transformation Centre (AIX) is a strategic collaboration between MCMC and Multimedia University (MMU), with 13 specialised AI laboratories at MMU Cyberjaya and MMU Melaka.">
+  <meta name="theme-color" content="#0F2049">
+  <meta name="color-scheme" content="light">
+  <!-- GitHub Pages demo copy: keep it out of search results so it is not mistaken for the official site -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Tab icon / app icons -->
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AIX | Artificial Intelligence Transformation Centre">
+  <meta property="og:description" content="MCMC × MMU — 13 specialised AI laboratories accelerating AI innovation, capability development and ecosystem growth in Malaysia.">
+  <meta property="og:image" content="https://teohsingjian02.github.io/aix-website/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://teohsingjian02.github.io/aix-website/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+  <link rel="preload" href="assets/fonts/itc-avant-garde-pro-book.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/itc-avant-garde-pro-demi.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,1,0&icon_names=account_balance,biotech,factory,handshake,local_library,memory,rocket_launch,school,science,storefront&display=block">
+
+  <link rel="preload" as="image" href="assets/img/hero-aix-launch.webp">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Boot screen (only shown when JavaScript runs) -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <img src="assets/img/brand/aix-mark-white.png" alt="" width="600" height="127">
+      <div class="preloader__bar"><span></span></div>
+      <p class="preloader__text">Initialising AI Transformation Centre<span class="preloader__dots"></span></p>
+    </div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="#home" aria-label="AIX — back to top">
+        <img src="assets/img/brand/aix-logo.png" alt="AIX — Artificial Intelligence Transformation Centre" width="820" height="229">
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span>
+        <span class="sr-only">Open menu</span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about" data-nav="about">About</a></li>
+        <li><a href="#why-aix" data-nav="why-aix">Why AIX?</a></li>
+        <li><a href="#laboratories" data-nav="laboratories">Laboratories</a></li>
+        <li><a href="#governance" data-nav="governance">Governance</a></li>
+        <li><a href="#partners" data-nav="partners">Partners</a></li>
+        <li><a class="nav__cta" href="#register" data-nav="register">Register!</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO / HOMEPAGE BANNER ============ -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero__media" role="img" aria-label="Launch of the AI Transformation Centre at Multimedia University, Cyberjaya"></div>
+      <div class="hero__shade"></div>
+      <div class="hero__grid"></div>
+      <canvas class="hero__network" aria-hidden="true"></canvas>
+      <div class="hero__scan" aria-hidden="true"></div>
+
+      <div class="hero__hud" aria-hidden="true">
+        <span class="hud-corner hud-corner--tl"></span><span class="hud-corner hud-corner--tr"></span>
+        <span class="hud-corner hud-corner--bl"></span><span class="hud-corner hud-corner--br"></span>
+        <span class="hud-label hud-label--tr">13 Labs · Cyberjaya &amp; Melaka</span>
+      </div>
+
+      <div class="container hero__inner">
+        <p class="eyebrow eyebrow--light" data-reveal><span class="pulse-dot"></span>MCMC × MMU Strategic Collaboration</p>
+        <h1 id="hero-title" class="hero__title" aria-label="AI Transformation Centre (AIX)">
+          <span class="hero__line" data-scramble>AI Transformation</span>
+          <span class="hero__line" data-scramble>Centre <span class="text-gradient">(AIX)</span></span>
+        </h1>
+        <p class="hero__lead" data-reveal style="--d:.15s">
+          Established through a strategic collaboration between the Malaysian Communications and Multimedia Commission (MCMC) and Multimedia University (MMU), the Artificial Intelligence Transformation Centre (AIX) accelerates AI innovation, capability development, and ecosystem growth in Malaysia.
+        </p>
+        <ul class="hero__tags" data-reveal style="--d:.25s">
+          <li><strong>13</strong> Specialised AI Laboratories</li>
+          <li>Government • Industry • Academia</li>
+          <li>Research • Innovation • Commercialisation</li>
+        </ul>
+        <div class="hero__actions" data-reveal style="--d:.35s">
+          <a class="btn btn--primary" href="#laboratories">
+            Explore Our Labs
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#register">
+            Collaborate with Us
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__partners" data-reveal style="--d:.5s">
+        <span>A collaborative initiative by</span>
+        <img src="assets/img/brand/mcmc-logo.png" alt="Malaysian Communications and Multimedia Commission (MCMC)" width="315" height="260">
+        <img src="assets/img/brand/mmu-logo.png" alt="Multimedia University (MMU)" width="720" height="212">
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Scroll to About AIX">
+        <span class="hero__mouse"><span></span></span>
+        <span class="hero__scroll-text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ KEY FIGURES ============ -->
+    <section class="stats" aria-label="AIX at a glance">
+      <div class="container stats__grid">
+        <div class="stat" data-reveal>
+          <span class="stat__value"><span data-count="13">13</span></span>
+          <span class="stat__label">Specialised AI Laboratories</span>
+        </div>
+        <div class="stat" data-reveal style="--d:.08s">
+          <span class="stat__value"><span data-count="2">2</span></span>
+          <span class="stat__label">MMU Campuses — Cyberjaya &amp; Melaka</span>
+        </div>
+        <div class="stat" data-reveal style="--d:.16s">
+          <span class="stat__value"><span data-count="4">4</span></span>
+          <span class="stat__label">Domain Clusters of Expertise</span>
+        </div>
+        <div class="stat" data-reveal style="--d:.24s">
+          <span class="stat__value"><span data-count="3">3</span></span>
+          <span class="stat__label">Sectors United — Government, Industry &amp; Academia</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT AIX ============ -->
+    <section id="about" class="section about" data-spy="about" aria-labelledby="about-title">
+      <div class="hex-pattern hex-pattern--dark" aria-hidden="true"></div>
+      <div class="container about__grid">
+        <div class="hexes" data-reveal>
+          <span class="hex hex--ghost hex--g1" aria-hidden="true"></span>
+          <span class="hex hex--ghost hex--g2" aria-hidden="true"></span>
+          <span class="hex hex--ghost hex--g3" aria-hidden="true"></span>
+          <span class="hex hex--ghost hex--g4" aria-hidden="true"></span>
+          <span class="hex hex--outline hex--o1" aria-hidden="true"></span>
+          <span class="hex hex--outline hex--o2" aria-hidden="true"></span>
+          <figure class="hex hex--photo hex--a">
+            <img src="assets/img/about-mou.webp" alt="Exchange of agreements at the launch of the AI Transformation Centre, witnessed by the Prime Minister of Malaysia" width="1100" height="777" loading="lazy">
+          </figure>
+          <figure class="hex hex--photo hex--b">
+            <img src="assets/img/campus-melaka.webp" alt="MMU Melaka campus" width="1000" height="603" loading="lazy">
+          </figure>
+          <figure class="hex hex--photo hex--c">
+            <img src="assets/img/campus-cyberjaya.webp" alt="Aerial view of the MMU Cyberjaya campus" width="1000" height="843" loading="lazy">
+          </figure>
+        </div>
+
+        <div class="about__copy">
+          <p class="eyebrow" data-reveal>Who We Are</p>
+          <h2 id="about-title" class="display display--light" data-reveal>About AIX</h2>
+          <p class="about__tagline" data-reveal>Accelerating AI e<span class="x-accent">X</span>cellence</p>
+          <span class="title-bar" data-reveal></span>
+          <p data-reveal>The Artificial Intelligence Transformation Centre (AIX) is a national collaborative initiative dedicated to advancing artificial intelligence innovation and adoption across Malaysia.</p>
+          <p data-reveal>Located at MMU's Cyberjaya and Melaka campuses, AIX houses 13 specialised laboratories equipped with advanced technologies and digital infrastructure that support research, experimentation, solution development, industry collaboration, and talent development.</p>
+          <p data-reveal>By bringing together government agencies, academia, industry leaders, researchers, startups, and innovators, AIX creates an ecosystem where ideas are transformed into practical AI solutions that address real-world challenges.</p>
+          <p data-reveal>Whether developing next-generation technologies, validating AI applications, or nurturing future AI talent, AIX serves as a catalyst for Malaysia's digital economy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY AIX ============ -->
+    <section id="why-aix" class="section why" data-spy="why-aix" aria-labelledby="why-title">
+      <div class="why__bg" aria-hidden="true"></div>
+      <div class="why__shade" aria-hidden="true"></div>
+      <div class="why__stream" aria-hidden="true"></div>
+      <div class="container">
+        <div class="why__content">
+          <p class="eyebrow" data-reveal>The AIX Advantage</p>
+          <h2 id="why-title" class="display display--light" data-reveal>Why AIX?</h2>
+          <span class="title-bar" data-reveal></span>
+
+          <ul class="checklist">
+            <li data-reveal>
+              <svg class="checklist__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+              <h3>A National Platform for AI Excellence</h3>
+              <p>At AIX, we bridge research, industry, and innovation through a collaborative ecosystem designed to accelerate AI adoption.</p>
+            </li>
+            <li data-reveal>
+              <svg class="checklist__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+              <h3>Research &amp; Innovation</h3>
+              <p>Develop cutting-edge AI technologies and intelligent solutions.</p>
+            </li>
+            <li data-reveal>
+              <svg class="checklist__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+              <h3>Industry Collaboration</h3>
+              <p>Partner with businesses to solve real-world challenges through AI.</p>
+            </li>
+            <li data-reveal>
+              <svg class="checklist__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+              <h3>Talent Development</h3>
+              <p>Equip students and professionals with future-ready AI skills.</p>
+            </li>
+            <li data-reveal>
+              <svg class="checklist__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+              <h3>Technology Validation</h3>
+              <p>Test, prototype and commercialise innovative AI solutions.</p>
+            </li>
+            <li data-reveal>
+              <svg class="checklist__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+              <h3>Digital Transformation</h3>
+              <p>Support organisations in adopting AI to improve productivity and competitiveness.</p>
+            </li>
+            <li data-reveal>
+              <svg class="checklist__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+              <h3>National Impact</h3>
+              <p>Contribute towards Malaysia's AI ecosystem and digital transformation agenda.</p>
+            </li>
+          </ul>
+
+          <a class="btn btn--primary why__cta" href="#laboratories" data-reveal>
+            Explore Our Labs
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OUR AI LABORATORIES ============ -->
+    <section id="laboratories" class="section labs" data-spy="laboratories" aria-labelledby="labs-title">
+      <div class="dot-grid" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow--dark" data-reveal>Our Facilities</p>
+          <h2 id="labs-title" class="display" data-reveal><span class="text-navy">Our</span> <span class="text-red">AI Laboratories</span></h2>
+          <p class="section-head__kicker" data-reveal>13 Specialised Laboratories</p>
+          <p data-reveal>AIX comprises thirteen specialised laboratories, each focusing on strategic areas of artificial intelligence and emerging technologies.</p>
+          <p class="labs__campuses" data-reveal>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><strong>10</strong> labs at MMU Cyberjaya</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><strong>3</strong> labs at MMU Melaka</span>
+          </p>
+        </header>
+
+        <div class="lab-slider" data-slider aria-roledescription="carousel" aria-label="AIX laboratories" data-reveal>
+          <div class="lab-stage">
+            <div class="lab-track" aria-live="off">
+
+              <article class="lab-slide is-active" data-thumb="assets/img/labs/thumbs/gaia.webp" aria-roledescription="slide" aria-label="1 of 13: GAIA">
+                <div class="lab-slide__media"><img src="assets/img/labs/gaia.webp" alt="Generative AI for Advanced Innovation (GAIA) laboratory" width="1600" height="917"></div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name">GAIA</h3>
+                  <p class="lab-slide__full">Generative AI for Advanced Innovation</p>
+                  <p class="lab-slide__desc">A flagship AI laboratory providing hands-on experience in machine learning, deep learning, natural language processing (NLP), machine vision, cloud computing, and embedded AI systems.</p>
+                  <p class="lab-slide__site">MMU Cyberjaya</p>
+                </div>
+              </article>
+
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/xr-ai.webp" aria-roledescription="slide" aria-label="2 of 13: XR-AI">
+                <div class="lab-slide__media lab-slide__gallery">
+                  <img src="assets/img/labs/xr-ai-1.webp" alt="Students exploring virtual reality with headsets in the XR-AI laboratory" width="1600" height="1066" loading="lazy">
+                  <img src="assets/img/labs/xr-ai-2.webp" alt="VR class in session at the XR-AI laboratory" width="1600" height="1066" loading="lazy">
+                  <img src="assets/img/labs/xr-ai-3.webp" alt="Hands-on mixed-reality interaction in the XR-AI laboratory" width="1600" height="1066" loading="lazy">
+                </div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name">XR-AI</h3>
+                  <p class="lab-slide__full">Extended Reality and Artificial Intelligence</p>
+                  <p class="lab-slide__desc">A state-of-the-art facility that integrates Virtual Reality (VR), Augmented Reality (AR), Mixed Reality (MR), and AI technologies to support immersive learning, research, and innovation.</p>
+                  <p class="lab-slide__site">MMU Cyberjaya</p>
+                </div>
+              </article>
+
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/intelligent-robotics.webp" aria-roledescription="slide" aria-label="3 of 13: Intelligent Robotics">
+                <div class="lab-slide__media"><img src="assets/img/labs/intelligent-robotics.webp" alt="Intelligent Robotics laboratory" width="1097" height="602" loading="lazy"></div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name">Intelligent Robotics</h3>
+                  <p class="lab-slide__desc">A laboratory dedicated to robotics and intelligent systems, enabling hands-on learning, experimentation, and development of robotic hardware and AI-powered robotic applications.</p>
+                  <p class="lab-slide__site">MMU Cyberjaya</p>
+                </div>
+              </article>
+
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/game-tech.webp" aria-roledescription="slide" aria-label="4 of 13: Game Tech">
+                <div class="lab-slide__media"><img src="assets/img/labs/game-tech.webp" alt="Game Tech laboratory" width="1600" height="840" loading="lazy"></div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name">Game Tech</h3>
+                  <p class="lab-slide__desc">An innovation hub that combines AI and game technologies to develop interactive digital experiences, intelligent gaming solutions, and next-generation applications.</p>
+                  <p class="lab-slide__site">MMU Cyberjaya</p>
+                </div>
+              </article>
+
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/nextgen-data-analytics.webp" aria-roledescription="slide" aria-label="5 of 13: NextGen Data Analytics">
+                <div class="lab-slide__media"><img src="assets/img/labs/nextgen-data-analytics.webp" alt="NextGen Data Analytics laboratory" width="1154" height="710" loading="lazy"></div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name">NextGen Data Analytics</h3>
+                  <p class="lab-slide__desc">A data analytics laboratory equipped with advanced computing infrastructure, edge AI technologies, AIoT systems, cloud platforms, and large-scale datasets to support artificial intelligence, predictive analytics, and data-driven decision-making.</p>
+                  <p class="lab-slide__site">MMU Melaka</p>
+                </div>
+              </article>
+
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/gema.webp" aria-roledescription="slide" aria-label="6 of 13: GEMA">
+                <div class="lab-slide__media"><img src="assets/img/labs/gema.webp" alt="Generative Multi-Dimensional Audio AI (GEMA) laboratory with its geodesic spatial-audio dome" width="1316" height="664" loading="lazy"></div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name">GEMA</h3>
+                  <p class="lab-slide__full">Generative Multi-Dimensional Audio AI</p>
+                  <p class="lab-slide__desc">An immersive audio laboratory equipped with advanced spatial audio technologies, including Ambisonics and Dolby Atmos systems, to explore the convergence of audio, AI, and spatial computing.</p>
+                  <p class="lab-slide__site">MMU Cyberjaya</p>
+                </div>
+              </article>
+
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/digital-forensic.webp" aria-roledescription="slide" aria-label="7 of 13: Digital Forensic">
+                <div class="lab-slide__media"><img src="assets/img/labs/digital-forensic.webp" alt="Digital Forensic laboratory" width="1289" height="727" loading="lazy"></div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name">Digital Forensic</h3>
+                  <p class="lab-slide__desc">A specialised laboratory that leverages AI-driven tools to support digital evidence analysis, cybercrime investigations, and cybersecurity research.</p>
+                  <p class="lab-slide__site">MMU Cyberjaya</p>
+                </div>
+              </article>
+
+              <article class="lab-slide" data-fit="contain" data-thumb="assets/img/labs/thumbs/business-intelligence.webp" aria-roledescription="slide" aria-label="8 of 13: Business Intelligence">
+                <div class="lab-slide__media"><img src="assets/img/labs/business-intelligence.webp" alt="Business Intelligence laboratory" width="1520" height="568" loading="lazy"></div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name">Business Intelligence</h3>
+                  <p class="lab-slide__desc">A data analytics and business intelligence laboratory that leverages AI-driven insights, predictive analytics, data storytelling and advanced visualization technologies to transform complex data into actionable business intelligence, enabling data-driven decision-making, operational excellence, and digital transformation.</p>
+                  <p class="lab-slide__site">MMU Melaka</p>
+                </div>
+              </article>
+
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/sigaal.webp" aria-roledescription="slide" aria-label="9 of 13: SIGAAL">
+                <div class="lab-slide__media"><img src="assets/img/labs/sigaal.webp" alt="Sixth-Generation Mobile with AI Assistance (SIGAAL) laboratory" width="1022" height="604" loading="lazy"></div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name">SIGAAL</h3>
+                  <p class="lab-slide__full">Sixth-Generation Mobile with AI Assistance</p>
+                  <p class="lab-slide__desc">A next-generation telecommunications laboratory focused on 6G technologies, terahertz (THz) systems, and AI-enabled network innovation aligned with Malaysia's future connectivity agenda.</p>
+                  <p class="lab-slide__site">MMU Cyberjaya</p>
+                </div>
+              </article>
+
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/blocksphere.webp" aria-roledescription="slide" aria-label="10 of 13: BlockSphere">
+                <div class="lab-slide__media"><img src="assets/img/labs/blocksphere.webp" alt="BlockSphere laboratory" width="1495" height="820" loading="lazy"></div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name">BlockSphere</h3>
+                  <p class="lab-slide__desc">A specialised laboratory dedicated to advancing secure, transparent, and trustworthy digital ecosystems through the integration of artificial intelligence with blockchain, smart contracts, applied cryptography, and decentralized data systems. The lab enables end-to-end innovation from cryptographic protocol design, zero-knowledge proof systems, and smart contract security analysis to decentralized application development, blockchain-IoT integration, and trusted data validation, supporting the translation of research ideas into secure, verifiable, and field-ready decentralized solutions.</p>
+                  <p class="lab-slide__site">MMU Cyberjaya</p>
+                </div>
+              </article>
+
+              <article class="lab-slide" data-fit="contain" data-thumb="assets/img/labs/thumbs/cyber-range.webp" aria-roledescription="slide" aria-label="11 of 13: Cyber Range">
+                <div class="lab-slide__media"><img src="assets/img/labs/cyber-range.webp" alt="Cyber Range laboratory" width="1600" height="570" loading="lazy"></div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name">Cyber Range</h3>
+                  <p class="lab-slide__desc">A cybersecurity simulation and training environment that supports AI-enabled cyber defence, threat intelligence, attack simulation, and security operations to strengthen digital resilience.</p>
+                  <p class="lab-slide__site">MMU Cyberjaya</p>
+                </div>
+              </article>
+
+              <article class="lab-slide" data-fit="contain" data-thumb="assets/img/labs/thumbs/xiot.webp" aria-roledescription="slide" aria-label="12 of 13: xIoT">
+                <!-- TODO: replace with a photo of the actual MMU xIoT lab — the current image is third-party (Phosphorus) marketing material. -->
+                <div class="lab-slide__media"><img src="assets/img/labs/xiot.webp" alt="Extended IoT Security Research (xIoT) laboratory" width="1600" height="711" loading="lazy"></div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name lab-slide__name--as-is">xIoT</h3>
+                  <p class="lab-slide__full">Extended IoT Security Research</p>
+                  <p class="lab-slide__desc">A special lab dedicated to securing and advancing intelligent Internet of Things (IoT) ecosystems through AI-powered threat analysis, real-time intrusion detection, vulnerability assessment, and practical cybersecurity investigations. The lab enables end-to-end innovation from edge-AI model development and embedded system integration to device enclosure, hardware refinement, and prototype packaging, supporting the translation of research ideas into functional, field-ready IoT solutions.</p>
+                  <p class="lab-slide__site">MMU Cyberjaya</p>
+                </div>
+              </article>
+
+              <article class="lab-slide" data-fit="contain" data-thumb="assets/img/labs/thumbs/statlab.webp" aria-roledescription="slide" aria-label="13 of 13: StatLab">
+                <div class="lab-slide__media"><img src="assets/img/labs/statlab.webp" alt="Data Analysis Research (StatLab) laboratory" width="1406" height="606" loading="lazy"></div>
+                <div class="lab-slide__body">
+                  <h3 class="lab-slide__name">StatLab</h3>
+                  <p class="lab-slide__full">Data Analysis Research</p>
+                  <p class="lab-slide__desc">An innovative research laboratory specializing in data science, statistics, and AI-powered analytics, delivering evidence-based solutions and strategic insights through advanced quantitative and qualitative research methodologies.</p>
+                  <p class="lab-slide__site">MMU Melaka</p>
+                </div>
+              </article>
+
+            </div>
+
+            <!-- HUD + controls (enhanced by JS) -->
+            <span class="hud-corner hud-corner--tl" aria-hidden="true"></span><span class="hud-corner hud-corner--tr" aria-hidden="true"></span>
+            <span class="hud-corner hud-corner--bl" aria-hidden="true"></span><span class="hud-corner hud-corner--br" aria-hidden="true"></span>
+            <div class="lab-hud" aria-hidden="true">
+              <span class="lab-hud__label">Laboratory</span>
+              <span class="lab-hud__count"><span data-lab-current>01</span> / 13</span>
+            </div>
+            <button class="lab-pause" type="button" aria-label="Pause automatic slide show" data-lab-pause>
+              <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+              <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>
+            </button>
+            <button class="lab-arrow lab-arrow--prev" type="button" aria-label="Previous laboratory" data-lab-prev>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button class="lab-arrow lab-arrow--next" type="button" aria-label="Next laboratory" data-lab-next>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+            <div class="lab-dots" role="group" aria-label="Choose a laboratory" data-lab-dots></div>
+            <div class="lab-progress" aria-hidden="true"><span data-lab-progress></span></div>
+          </div>
+
+          <ol class="lab-index" data-lab-index aria-label="All 13 laboratories"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COLLABORATION ECOSYSTEM ============ -->
+    <section id="ecosystem" class="section ecosystem" data-spy="partners" aria-labelledby="eco-title">
+      <div class="ecosystem__bg" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-reveal>Collaboration Ecosystem</p>
+          <h2 id="eco-title" class="display display--light" data-reveal>Bringing Together the <span class="text-cyan">AI Community</span></h2>
+          <p class="section-head__lead" data-reveal>AIX welcomes collaboration from organisations seeking to harness the power of artificial intelligence.</p>
+        </header>
+
+        <div class="eco" data-eco>
+          <svg class="eco__links" aria-hidden="true" data-eco-links></svg>
+
+          <div class="eco__core" data-eco-core aria-hidden="true">
+            <span class="eco__ring eco__ring--1"></span>
+            <span class="eco__ring eco__ring--2"></span>
+            <span class="eco__ring eco__ring--3"></span>
+            <img src="assets/img/brand/aix-mark-white.png" alt="" width="600" height="127">
+            <span class="eco__core-label">AI Transformation Hub</span>
+          </div>
+
+          <article class="eco__node eco__node--1" data-reveal>
+            <span class="eco__icon material-symbols-rounded" aria-hidden="true">account_balance</span>
+            <h3>Government Agencies</h3>
+            <p>Supporting national digital initiatives and AI policies.</p>
+          </article>
+          <article class="eco__node eco__node--2" data-reveal style="--d:.08s">
+            <span class="eco__icon material-symbols-rounded" aria-hidden="true">factory</span>
+            <h3>Industry Partners</h3>
+            <p>Co-develop AI solutions and drive digital transformation.</p>
+          </article>
+          <article class="eco__node eco__node--3" data-reveal style="--d:.16s">
+            <span class="eco__icon material-symbols-rounded" aria-hidden="true">school</span>
+            <h3>Academic Institutions</h3>
+            <p>Advance multidisciplinary research and knowledge exchange.</p>
+          </article>
+          <article class="eco__node eco__node--4" data-reveal style="--d:.24s">
+            <span class="eco__icon material-symbols-rounded" aria-hidden="true">biotech</span>
+            <h3>Researchers</h3>
+            <p>Access cutting-edge facilities and collaborative research opportunities.</p>
+          </article>
+          <article class="eco__node eco__node--5" data-reveal style="--d:.32s">
+            <span class="eco__icon material-symbols-rounded" aria-hidden="true">rocket_launch</span>
+            <h3>Startups &amp; Innovators</h3>
+            <p>Prototype, validate and commercialise AI technologies.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GOVERNANCE ============ -->
+    <section id="governance" class="section governance" data-spy="governance" aria-labelledby="gov-title">
+      <div class="hex-pattern hex-pattern--light" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow--dark" data-reveal>Governance</p>
+          <h2 id="gov-title" class="display" data-reveal><span class="text-navy">Strong Leadership,</span> <span class="text-red">Sustainable Impact</span></h2>
+          <p data-reveal>AIX is jointly governed by MCMC and MMU, ensuring strategic direction, operational excellence, and long-term sustainability.</p>
+          <p data-reveal>The Centre is led by an experienced project management team and supported by domain experts across Engineering, Information Technology, Creative Multimedia, and Management, enabling multidisciplinary collaboration and innovation.</p>
+        </header>
+
+        <!-- Project governance structure -->
+        <div class="org">
+          <h3 class="org__title" data-reveal>AIX Project Governance Structure</h3>
+
+          <figure class="org__person org__person--advisor" data-reveal>
+            <img src="assets/img/people/gov-salmi.webp" alt="Advisor: YBrs. Prof. Dr. Mohamad Salmi bin Mohd. Sohod, Commission Member, MCMC" width="533" height="711" loading="lazy">
+          </figure>
+          <span class="org__line" aria-hidden="true"></span>
+          <p class="org__pill org__pill--navy" data-reveal>Project Steering Committee (PSC)</p>
+          <span class="org__line org__line--short" aria-hidden="true"></span>
+          <p class="org__pill" data-reveal>Chairmen</p>
+
+          <div class="org__row org__row--chairs">
+            <figure class="org__person" data-reveal>
+              <img src="assets/img/people/gov-abdul-karim.webp" alt="Chairman: YBrs. Encik Abdul Karim Fakir Ali, Managing Director, MCMC" width="533" height="707" loading="lazy">
+            </figure>
+            <figure class="org__person" data-reveal style="--d:.1s">
+              <img src="assets/img/people/gov-mazliham.webp" alt="Chairman: YBhg. Prof. Dato' Ts. Dr. Mazliham Mohd Su'ud, President/CEO, MMU" width="533" height="707" loading="lazy">
+            </figure>
+          </div>
+
+          <span class="org__line" aria-hidden="true"></span>
+          <p class="org__pill" data-reveal>Committee Members</p>
+
+          <div class="org__row org__row--members">
+            <figure class="org__person" data-reveal>
+              <img src="assets/img/people/gov-murugappan.webp" alt="Dr. Murugappan, Chief Human Capital Resource Officer, MCMC" width="475" height="631" loading="lazy">
+            </figure>
+            <figure class="org__person" data-reveal style="--d:.08s">
+              <img src="assets/img/people/gov-sulaiman.webp" alt="Datuk Ts. Dr. Sulaiman Sultan Suhaibuddin, Chief Network Security Officer, MCMC" width="476" height="631" loading="lazy">
+            </figure>
+            <figure class="org__person" data-reveal style="--d:.16s">
+              <img src="assets/img/people/gov-wong-hin-yong.webp" alt="Prof. Ir. Dr. Wong Hin Yong, Vice President, Academic and Innovation, MMU" width="475" height="631" loading="lazy">
+            </figure>
+            <figure class="org__person" data-reveal style="--d:.24s">
+              <img src="assets/img/people/gov-nor-adni.webp" alt="Puan Nor Adni Ismail, Chief Financial Officer, MMU" width="475" height="631" loading="lazy">
+            </figure>
+          </div>
+        </div>
+
+        <!-- MMU AIX Chair management -->
+        <div class="chair">
+          <h3 class="org__title" data-reveal><span class="text-navy">MMU AIX</span> <span class="text-red">Chair Management</span></h3>
+          <p class="chair__intro" data-reveal>Led by MMU academics — a Lead Professor supported by domain experts overseeing the laboratory clusters across Engineering, Information Technology, Creative Multimedia, and Management.</p>
+
+          <div class="chair__lead">
+            <figure class="hexcard hexcard--lead" data-reveal>
+              <span class="hexcard__hex"></span>
+              <span class="hexcard__photo"><img src="assets/img/people/chair-junaidi.webp" alt="Prof. Dr. Junaidi bin Abdullah" width="640" height="800" loading="lazy"></span>
+              <span class="hexcard__shade"></span>
+              <figcaption>
+                <span class="hexcard__name">Prof. Dr. Junaidi bin Abdullah</span>
+                <span class="hexcard__role">Professor C</span>
+              </figcaption>
+              <p class="hexcard__pill"><strong>Project Manager /<br>Lead Professor</strong></p>
+            </figure>
+          </div>
+
+          <div class="chair__experts">
+            <figure class="hexcard" data-reveal>
+              <span class="hexcard__hex"></span>
+              <span class="hexcard__photo"><img src="assets/img/people/chair-fabian.webp" alt="Ir. Prof. Dr. Fabian Kung Wai Lee" width="640" height="800" loading="lazy"></span>
+              <span class="hexcard__shade"></span>
+              <figcaption>
+                <span class="hexcard__name">Ir. Prof. Dr. Fabian Kung Wai Lee</span>
+                <span class="hexcard__role">Professor</span>
+              </figcaption>
+              <p class="hexcard__pill">Domain Expert<strong>AI &amp; Engineering (3 Labs)</strong></p>
+            </figure>
+            <figure class="hexcard" data-reveal style="--d:.08s">
+              <span class="hexcard__hex"></span>
+              <span class="hexcard__photo"><img src="assets/img/people/chair-goh.webp" alt="Assoc. Prof. Ts. Dr. Goh Kah Ong Michael" width="640" height="800" loading="lazy"></span>
+              <span class="hexcard__shade"></span>
+              <figcaption>
+                <span class="hexcard__name">Assoc. Prof. Ts. Dr. Goh Kah Ong Michael</span>
+                <span class="hexcard__role">Associate Professor</span>
+              </figcaption>
+              <p class="hexcard__pill">Domain Expert<strong>IT (6 Labs)</strong></p>
+            </figure>
+            <figure class="hexcard" data-reveal style="--d:.16s">
+              <span class="hexcard__hex"></span>
+              <span class="hexcard__photo"><img src="assets/img/people/chair-wong.webp" alt="Prof. Dr. Wong Chee Onn" width="640" height="800" loading="lazy"></span>
+              <span class="hexcard__shade"></span>
+              <figcaption>
+                <span class="hexcard__name">Prof. Dr. Wong Chee Onn</span>
+                <span class="hexcard__role">Professor</span>
+              </figcaption>
+              <p class="hexcard__pill">Domain Expert<strong>Creative Multimedia (2 Labs)</strong></p>
+            </figure>
+            <figure class="hexcard" data-reveal style="--d:.24s">
+              <span class="hexcard__hex"></span>
+              <span class="hexcard__photo"><img src="assets/img/people/chair-liew.webp" alt="Assoc. Prof. Dr. Liew Tze Wei" width="640" height="800" loading="lazy"></span>
+              <span class="hexcard__shade"></span>
+              <figcaption>
+                <span class="hexcard__name">Assoc. Prof. Dr. Liew Tze Wei</span>
+                <span class="hexcard__role">Associate Professor</span>
+              </figcaption>
+              <p class="hexcard__pill">Domain Expert<strong>Management (2 Labs)</strong></p>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHO SHOULD PARTNER WITH US ============ -->
+    <section id="partners" class="section partners" data-spy="partners" aria-labelledby="partners-title">
+      <div class="circuit" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-reveal>Partnerships</p>
+          <h2 id="partners-title" class="display display--light" data-reveal>Who Should Partner With Us?</h2>
+          <p class="section-head__lead" data-reveal>Whether you're looking to explore AI opportunities, develop innovative solutions, conduct collaborative research, or upskill your workforce, AIX provides the expertise, facilities, and ecosystem to help you succeed.</p>
+          <p class="partners__welcome" data-reveal>We welcome collaboration with:</p>
+        </header>
+
+        <ul class="partner-grid">
+          <li class="partner" data-reveal><span class="partner__icon"><span class="material-symbols-rounded" aria-hidden="true">account_balance</span></span><h3>Government Agencies</h3></li>
+          <li class="partner" data-reveal style="--d:.06s"><span class="partner__icon"><span class="material-symbols-rounded" aria-hidden="true">handshake</span></span><h3>Industry Partners</h3></li>
+          <li class="partner" data-reveal style="--d:.12s"><span class="partner__icon"><span class="material-symbols-rounded" aria-hidden="true">school</span></span><h3>Universities</h3></li>
+          <li class="partner" data-reveal style="--d:.18s"><span class="partner__icon"><span class="material-symbols-rounded" aria-hidden="true">science</span></span><h3>Research Institutions</h3></li>
+          <li class="partner" data-reveal><span class="partner__icon"><span class="material-symbols-rounded" aria-hidden="true">memory</span></span><h3>Technology Companies</h3></li>
+          <li class="partner" data-reveal style="--d:.06s"><span class="partner__icon"><span class="material-symbols-rounded" aria-hidden="true">storefront</span></span><h3>SMEs</h3></li>
+          <li class="partner" data-reveal style="--d:.12s"><span class="partner__icon"><span class="material-symbols-rounded" aria-hidden="true">rocket_launch</span></span><h3>Startups</h3></li>
+          <li class="partner" data-reveal style="--d:.18s"><span class="partner__icon"><span class="material-symbols-rounded" aria-hidden="true">local_library</span></span><h3>Students and Researchers</h3></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ REGISTER YOUR INTEREST ============ -->
+    <section id="register" class="section register" data-spy="register" aria-labelledby="register-title">
+      <div class="container">
+        <div class="cta-card" data-reveal>
+          <div class="cta-card__visual">
+            <div class="cta-card__copy">
+              <p class="eyebrow eyebrow--dark">Register Your Interest</p>
+              <h2 id="register-title" class="cta-card__title">Let's Build the Future of AI Together</h2>
+              <p>Artificial intelligence is transforming every industry. At AIX, we believe collaboration is the key to unlocking its full potential.</p>
+              <p>Join us in shaping innovative AI solutions, developing future talent, and advancing Malaysia's digital transformation journey.</p>
+            </div>
+          </div>
+
+          <div class="cta-card__band">
+            <p class="cta-card__big">Register your interest today to collaborate with AIX.</p>
+            <p>Scan here and fill out the form. We will get back to you as soon as possible!</p>
+            <a class="btn btn--light" href="https://forms.office.com/Pages/ResponsePage.aspx?id=z18LfsQS_06WtkZk8l3H2jmKsyD0e29Nii7NIf8IaWtUMVBBWjdJOE9WRzRGNU5UV0hFV1NUQkRLRC4u" target="_blank" rel="noopener">
+              Collaborate with Us
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+            </a>
+          </div>
+
+          <div class="cta-card__qr">
+            <div class="qr">
+              <img src="assets/img/brand/qr-register.png" alt="QR code linking to the AIX Industry Partner Onboarding Form" width="560" height="558" loading="lazy">
+              <span class="qr__laser" aria-hidden="true"></span>
+              <span class="hud-corner hud-corner--tl" aria-hidden="true"></span><span class="hud-corner hud-corner--tr" aria-hidden="true"></span>
+              <span class="hud-corner hud-corner--bl" aria-hidden="true"></span><span class="hud-corner hud-corner--br" aria-hidden="true"></span>
+            </div>
+            <p class="qr__caption">AIX Industry Partner Onboarding Form</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__info">
+        <p class="footer__title">Artificial Intelligence Transformation Centre (AIX)</p>
+        <p class="footer__by">A collaborative initiative by<br>
+          <strong>Malaysian Communications and Multimedia Commission (MCMC)</strong><br>
+          and<br>
+          <strong>Multimedia University (MMU)</strong>
+        </p>
+
+        <ul class="footer__links">
+          <!-- TODO: point "Contact Us" to the official AIX contact page / email once confirmed. -->
+          <li><a href="#register">Contact Us</a></li>
+          <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=z18LfsQS_06WtkZk8l3H2jmKsyD0e29Nii7NIf8IaWtUMVBBWjdJOE9WRzRGNU5UV0hFV1NUQkRLRC4u" target="_blank" rel="noopener">Collaboration Enquiries</a></li>
+        </ul>
+
+        <!-- TODO: replace each "#" with the official social media URL. -->
+        <ul class="footer__social" aria-label="Social media">
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.5-1 .9-1h2.3V2.1L14.1 2C10.7 2 10 4.5 10 6.1v2.4H7.8V12H10v10h4V12h2.9l.4-3.5H14z"/></svg></a></li>
+          <li><a href="#" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg></a></li>
+          <li><a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.4 6.4 0 1 0 5.4 6.3V8.6a7.9 7.9 0 0 0 4.4 1.4V6.6a4.5 4.5 0 0 1-4.4-4.6z"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="17.3" cy="6.7" r="1.2"/></svg></a></li>
+          <li><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.9 8.8H3.4v11.7h3.5V8.8zM5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM20.6 13.7c0-3.1-1.7-5.1-4.4-5.1-1.5 0-2.6.8-3.1 1.6V8.8H9.7v11.7h3.5v-6.2c0-1.6.6-2.8 2.1-2.8s2 1.2 2 2.9v6.1h3.4v-6.8z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="footer__logos">
+        <img src="assets/img/brand/mcmc-logo.png" alt="Malaysian Communications and Multimedia Commission (MCMC)" width="315" height="260" loading="lazy">
+        <img src="assets/img/brand/mmu-logo.png" alt="Multimedia University (MMU)" width="720" height="212" loading="lazy">
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span data-year>2026</span> Multimedia University (MMU). All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <a class="ebee" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=z18LfsQS_06WtkZk8l3H2jmKsyD0e29Nii7NIf8IaWtUMVBBWjdJOE9WRzRGNU5UV0hFV1NUQkRLRC4u" target="_blank" rel="noopener" aria-label="Need help? Ask Ebee — opens the AIX enquiry form in a new tab">
+    <span class="ebee__bubble" aria-hidden="true">Need help? <strong>Ask Ebee!</strong></span>
+    <img src="assets/img/ebee.webp" alt="" width="320" height="284">
+  </a>
+
+  <a class="to-top" href="#home" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
+</body>
+</html>
