@@ -10,7 +10,7 @@ This preview is for review only. It is not the official AIX site.
 
 - Plain HTML, CSS and JavaScript, with no framework or build step.
 - ITC Avant Garde Gothic, the MMU corporate typeface, and Anton for display headings.
-- A neural-network canvas and a 13-laboratory carousel, with scroll animations throughout.
+- A photo slider with a scanner-style transition, a neural-network canvas and a 13-laboratory carousel, with scroll animations throughout.
 
 ## Run locally
 

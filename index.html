@@ -33,7 +33,7 @@
   <link rel="preload" href="assets/fonts/itc-avant-garde-pro-demi.otf" as="font" type="font/otf" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,1,0&icon_names=account_balance,biotech,factory,handshake,local_library,memory,rocket_launch,school,science,storefront&display=block">
 
-  <link rel="preload" as="image" href="assets/img/hero-aix-launch.webp">
+  <link rel="preload" as="image" href="assets/img/hero/slide-1-launch.webp" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/style.css">
   <script>document.documentElement.classList.add('js');</script>
   <script src="assets/js/main.js" defer></script>
@@ -77,32 +77,56 @@
 
     <!-- ============ HERO / HOMEPAGE BANNER ============ -->
     <section id="home" class="hero" aria-labelledby="hero-title">
-      <div class="hero__media" role="img" aria-label="Launch of the AI Transformation Centre at Multimedia University, Cyberjaya"></div>
+      <!-- the current photo's colours glow out around the slider (pre-blurred copies) -->
+      <div class="hero__ambient" aria-hidden="true">
+        <span class="is-active" style="background-image: url('assets/img/hero/ambient-1.webp')"></span>
+        <span style="background-image: url('assets/img/hero/ambient-2.webp')"></span>
+        <span style="background-image: url('assets/img/hero/ambient-3.webp')"></span>
+        <span style="background-image: url('assets/img/hero/ambient-4.webp')"></span>
+      </div>
       <div class="hero__shade"></div>
       <div class="hero__grid"></div>
       <canvas class="hero__network" aria-hidden="true"></canvas>
       <div class="hero__scan" aria-hidden="true"></div>
 
-      <div class="hero__hud" aria-hidden="true">
-        <span class="hud-corner hud-corner--tl"></span><span class="hud-corner hud-corner--tr"></span>
-        <span class="hud-corner hud-corner--bl"></span><span class="hud-corner hud-corner--br"></span>
-        <span class="hud-label hud-label--tr">13 Labs · Cyberjaya &amp; Melaka</span>
+      <!-- Photo slider: below the header, above the title. Edges fade into the page. -->
+      <div class="hero-slider" data-hero-slider aria-roledescription="carousel" aria-label="AIX highlights">
+        <div class="hero-slider__stage">
+          <figure class="hero-slide is-active" style="--pos: 50% 42%" aria-roledescription="slide" aria-label="1 of 4">
+            <img src="assets/img/hero/slide-1-launch.webp" alt="Launch of the AI Transformation Centre at Multimedia University, Cyberjaya" width="1600" height="1067" fetchpriority="high">
+          </figure>
+          <figure class="hero-slide" style="--pos: 50% 26%" aria-roledescription="slide" aria-label="2 of 4">
+            <img src="assets/img/hero/slide-2-team.webp" alt="The AIX team in front of the 13 Specialised AI Laboratories backdrop" width="1280" height="960" loading="lazy">
+          </figure>
+          <figure class="hero-slide" style="--pos: 40% 62%" aria-roledescription="slide" aria-label="3 of 4">
+            <img src="assets/img/hero/slide-3-booth.webp" alt="AIX exhibition booth with the AIX light cubes and MMU display counters" width="1000" height="750" loading="lazy">
+          </figure>
+          <figure class="hero-slide" style="--pos: 50% 30%" aria-roledescription="slide" aria-label="4 of 4">
+            <img src="assets/img/hero/slide-4-entice.webp" alt="Exhibition hall and main stage at the ENTICE event" width="1280" height="960" loading="lazy">
+          </figure>
+          <span class="hero-slider__beam" aria-hidden="true"></span>
+        </div>
+        <span class="hud-corner hud-corner--tl" aria-hidden="true"></span><span class="hud-corner hud-corner--tr" aria-hidden="true"></span>
+        <span class="hud-corner hud-corner--bl" aria-hidden="true"></span><span class="hud-corner hud-corner--br" aria-hidden="true"></span>
+        <div class="hero-slider__controls">
+          <button class="hero-slider__arrow" type="button" aria-label="Previous photo" data-hero-prev>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
+          <div class="hero-slider__dots" role="group" aria-label="Choose a photo" data-hero-dots></div>
+          <button class="hero-slider__arrow" type="button" aria-label="Next photo" data-hero-next>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
       </div>
 
       <div class="container hero__inner">
-        <p class="eyebrow eyebrow--light" data-reveal><span class="pulse-dot"></span>MCMC × MMU Strategic Collaboration</p>
-        <h1 id="hero-title" class="hero__title" aria-label="AI Transformation Centre (AIX)">
-          <span class="hero__line" data-scramble>AI Transformation</span>
-          <span class="hero__line" data-scramble>Centre <span class="text-gradient">(AIX)</span></span>
-        </h1>
-        <p class="hero__lead" data-reveal style="--d:.15s">
-          Established through a strategic collaboration between the Malaysian Communications and Multimedia Commission (MCMC) and Multimedia University (MMU), the Artificial Intelligence Transformation Centre (AIX) accelerates AI innovation, capability development, and ecosystem growth in Malaysia.
-        </p>
-        <ul class="hero__tags" data-reveal style="--d:.25s">
-          <li><strong>13</strong> Specialised AI Laboratories</li>
-          <li>Government • Industry • Academia</li>
-          <li>Research • Innovation • Commercialisation</li>
-        </ul>
+        <div class="hero__head">
+          <p class="eyebrow eyebrow--light" data-reveal><span class="pulse-dot"></span>MCMC × MMU Strategic Collaboration</p>
+          <h1 id="hero-title" class="hero__title" aria-label="AI Transformation Centre (AIX)">
+            <span class="hero__line" data-scramble>AI Transformation</span>
+            <span class="hero__line" data-scramble>Centre <span class="text-gradient">(AIX)</span></span>
+          </h1>
+        </div>
         <div class="hero__actions" data-reveal style="--d:.35s">
           <a class="btn btn--primary" href="#laboratories">
             Explore Our Labs
@@ -113,18 +137,22 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
+        <div class="hero__side">
+          <p class="hero__lead" data-reveal style="--d:.15s">
+            Established through a strategic collaboration between the Malaysian Communications and Multimedia Commission (MCMC) and Multimedia University (MMU), the Artificial Intelligence Transformation Centre (AIX) accelerates AI innovation, capability development, and ecosystem growth in Malaysia.
+          </p>
+          <ul class="hero__tags" data-reveal style="--d:.25s">
+            <li><strong>13</strong> Specialised AI Laboratories</li>
+            <li>Government • Industry • Academia</li>
+            <li>Research • Innovation • Commercialisation</li>
+          </ul>
+          <div class="hero__partners" data-reveal style="--d:.45s">
+            <span>A collaborative initiative by</span>
+            <img src="assets/img/brand/mcmc-logo.png" alt="Malaysian Communications and Multimedia Commission (MCMC)" width="315" height="260">
+            <img src="assets/img/brand/mmu-logo.png" alt="Multimedia University (MMU)" width="720" height="212">
+          </div>
+        </div>
       </div>
-
-      <div class="hero__partners" data-reveal style="--d:.5s">
-        <span>A collaborative initiative by</span>
-        <img src="assets/img/brand/mcmc-logo.png" alt="Malaysian Communications and Multimedia Commission (MCMC)" width="315" height="260">
-        <img src="assets/img/brand/mmu-logo.png" alt="Multimedia University (MMU)" width="720" height="212">
-      </div>
-
-      <a class="hero__scroll" href="#about" aria-label="Scroll to About AIX">
-        <span class="hero__mouse"><span></span></span>
-        <span class="hero__scroll-text">Scroll</span>
-      </a>
     </section>
 
     <!-- ============ KEY FIGURES ============ -->
@@ -260,8 +288,8 @@
           <div class="lab-stage">
             <div class="lab-track" aria-live="off">
 
-              <article class="lab-slide is-active" data-thumb="assets/img/labs/thumbs/gaia.webp" aria-roledescription="slide" aria-label="1 of 13: GAIA">
-                <div class="lab-slide__media"><img src="assets/img/labs/gaia.webp" alt="Generative AI for Advanced Innovation (GAIA) laboratory" width="1600" height="917"></div>
+              <article class="lab-slide is-active" data-thumb="assets/img/labs/thumbs/gaia.webp?v=20260930" aria-roledescription="slide" aria-label="1 of 13: GAIA">
+                <div class="lab-slide__media"><img src="assets/img/labs/gaia.webp?v=20260930" alt="Workstations in the Generative AI for Advanced Innovation (GAIA) laboratory" width="1448" height="1086"></div>
                 <div class="lab-slide__body">
                   <h3 class="lab-slide__name">GAIA</h3>
                   <p class="lab-slide__full">Generative AI for Advanced Innovation</p>
@@ -270,7 +298,7 @@
                 </div>
               </article>
 
-              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/xr-ai.webp" aria-roledescription="slide" aria-label="2 of 13: XR-AI">
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/xr-ai.webp?v=20260930" aria-roledescription="slide" aria-label="2 of 13: XR-AI">
                 <div class="lab-slide__media lab-slide__gallery">
                   <img src="assets/img/labs/xr-ai-1.webp" alt="Students exploring virtual reality with headsets in the XR-AI laboratory" width="1600" height="1066" loading="lazy">
                   <img src="assets/img/labs/xr-ai-2.webp" alt="VR class in session at the XR-AI laboratory" width="1600" height="1066" loading="lazy">
@@ -284,8 +312,8 @@
                 </div>
               </article>
 
-              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/intelligent-robotics.webp" aria-roledescription="slide" aria-label="3 of 13: Intelligent Robotics">
-                <div class="lab-slide__media"><img src="assets/img/labs/intelligent-robotics.webp" alt="Intelligent Robotics laboratory" width="1097" height="602" loading="lazy"></div>
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/intelligent-robotics.webp?v=20260930" aria-roledescription="slide" aria-label="3 of 13: Intelligent Robotics">
+                <div class="lab-slide__media"><img src="assets/img/labs/intelligent-robotics.webp?v=20260930" alt="Humanoid and mobile robots in the Intelligent Robotics laboratory" width="1572" height="1001" loading="lazy"></div>
                 <div class="lab-slide__body">
                   <h3 class="lab-slide__name">Intelligent Robotics</h3>
                   <p class="lab-slide__desc">A laboratory dedicated to robotics and intelligent systems, enabling hands-on learning, experimentation, and development of robotic hardware and AI-powered robotic applications.</p>
@@ -293,8 +321,8 @@
                 </div>
               </article>
 
-              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/game-tech.webp" aria-roledescription="slide" aria-label="4 of 13: Game Tech">
-                <div class="lab-slide__media"><img src="assets/img/labs/game-tech.webp" alt="Game Tech laboratory" width="1600" height="840" loading="lazy"></div>
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/game-tech.webp?v=20260930" aria-roledescription="slide" aria-label="4 of 13: Game Tech">
+                <div class="lab-slide__media"><img src="assets/img/labs/game-tech.webp?v=20260930" alt="Game Tech laboratory" width="1408" height="768" loading="lazy"></div>
                 <div class="lab-slide__body">
                   <h3 class="lab-slide__name">Game Tech</h3>
                   <p class="lab-slide__desc">An innovation hub that combines AI and game technologies to develop interactive digital experiences, intelligent gaming solutions, and next-generation applications.</p>
@@ -302,8 +330,11 @@
                 </div>
               </article>
 
-              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/nextgen-data-analytics.webp" aria-roledescription="slide" aria-label="5 of 13: NextGen Data Analytics">
-                <div class="lab-slide__media"><img src="assets/img/labs/nextgen-data-analytics.webp" alt="NextGen Data Analytics laboratory" width="1154" height="710" loading="lazy"></div>
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/nextgen-data-analytics.webp?v=20260930" aria-roledescription="slide" aria-label="5 of 13: NextGen Data Analytics">
+                <div class="lab-slide__media lab-slide__gallery" data-photos="2">
+                  <img src="assets/img/labs/nextgen-data-analytics-1.webp" alt="NextGen Data Analytics laboratory with GPU servers and analytics workstations" width="1408" height="768" loading="lazy">
+                  <img src="assets/img/labs/nextgen-data-analytics-2.webp" alt="Predictive modelling class in the NextGen Data Analytics laboratory" width="1408" height="768" loading="lazy">
+                </div>
                 <div class="lab-slide__body">
                   <h3 class="lab-slide__name">NextGen Data Analytics</h3>
                   <p class="lab-slide__desc">A data analytics laboratory equipped with advanced computing infrastructure, edge AI technologies, AIoT systems, cloud platforms, and large-scale datasets to support artificial intelligence, predictive analytics, and data-driven decision-making.</p>
@@ -311,7 +342,7 @@
                 </div>
               </article>
 
-              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/gema.webp" aria-roledescription="slide" aria-label="6 of 13: GEMA">
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/gema.webp?v=20260930" aria-roledescription="slide" aria-label="6 of 13: GEMA">
                 <div class="lab-slide__media"><img src="assets/img/labs/gema.webp" alt="Generative Multi-Dimensional Audio AI (GEMA) laboratory with its geodesic spatial-audio dome" width="1316" height="664" loading="lazy"></div>
                 <div class="lab-slide__body">
                   <h3 class="lab-slide__name">GEMA</h3>
@@ -321,8 +352,8 @@
                 </div>
               </article>
 
-              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/digital-forensic.webp" aria-roledescription="slide" aria-label="7 of 13: Digital Forensic">
-                <div class="lab-slide__media"><img src="assets/img/labs/digital-forensic.webp" alt="Digital Forensic laboratory" width="1289" height="727" loading="lazy"></div>
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/digital-forensic.webp?v=20260930" aria-roledescription="slide" aria-label="7 of 13: Digital Forensic">
+                <div class="lab-slide__media"><img src="assets/img/labs/digital-forensic.webp?v=20260930" alt="Digital Forensic laboratory" width="1408" height="768" loading="lazy"></div>
                 <div class="lab-slide__body">
                   <h3 class="lab-slide__name">Digital Forensic</h3>
                   <p class="lab-slide__desc">A specialised laboratory that leverages AI-driven tools to support digital evidence analysis, cybercrime investigations, and cybersecurity research.</p>
@@ -330,8 +361,8 @@
                 </div>
               </article>
 
-              <article class="lab-slide" data-fit="contain" data-thumb="assets/img/labs/thumbs/business-intelligence.webp" aria-roledescription="slide" aria-label="8 of 13: Business Intelligence">
-                <div class="lab-slide__media"><img src="assets/img/labs/business-intelligence.webp" alt="Business Intelligence laboratory" width="1520" height="568" loading="lazy"></div>
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/business-intelligence.webp?v=20260930" aria-roledescription="slide" aria-label="8 of 13: Business Intelligence">
+                <div class="lab-slide__media"><img src="assets/img/labs/business-intelligence.webp?v=20260930" alt="Business Intelligence laboratory" width="1600" height="900" loading="lazy"></div>
                 <div class="lab-slide__body">
                   <h3 class="lab-slide__name">Business Intelligence</h3>
                   <p class="lab-slide__desc">A data analytics and business intelligence laboratory that leverages AI-driven insights, predictive analytics, data storytelling and advanced visualization technologies to transform complex data into actionable business intelligence, enabling data-driven decision-making, operational excellence, and digital transformation.</p>
@@ -339,8 +370,8 @@
                 </div>
               </article>
 
-              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/sigaal.webp" aria-roledescription="slide" aria-label="9 of 13: SIGAAL">
-                <div class="lab-slide__media"><img src="assets/img/labs/sigaal.webp" alt="Sixth-Generation Mobile with AI Assistance (SIGAAL) laboratory" width="1022" height="604" loading="lazy"></div>
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/sigaal.webp?v=20260930" aria-roledescription="slide" aria-label="9 of 13: SIGAAL">
+                <div class="lab-slide__media"><img src="assets/img/labs/sigaal.webp?v=20260930" alt="RF test and measurement equipment in the Sixth-Generation Mobile with AI Assistance (SIGAAL) laboratory" width="1600" height="900" loading="lazy"></div>
                 <div class="lab-slide__body">
                   <h3 class="lab-slide__name">SIGAAL</h3>
                   <p class="lab-slide__full">Sixth-Generation Mobile with AI Assistance</p>
@@ -349,8 +380,8 @@
                 </div>
               </article>
 
-              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/blocksphere.webp" aria-roledescription="slide" aria-label="10 of 13: BlockSphere">
-                <div class="lab-slide__media"><img src="assets/img/labs/blocksphere.webp" alt="BlockSphere laboratory" width="1495" height="820" loading="lazy"></div>
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/blocksphere.webp?v=20260930" aria-roledescription="slide" aria-label="10 of 13: BlockSphere">
+                <div class="lab-slide__media"><img src="assets/img/labs/blocksphere.webp?v=20260930" alt="BlockSphere laboratory" width="1408" height="768" loading="lazy"></div>
                 <div class="lab-slide__body">
                   <h3 class="lab-slide__name">BlockSphere</h3>
                   <p class="lab-slide__desc">A specialised laboratory dedicated to advancing secure, transparent, and trustworthy digital ecosystems through the integration of artificial intelligence with blockchain, smart contracts, applied cryptography, and decentralized data systems. The lab enables end-to-end innovation from cryptographic protocol design, zero-knowledge proof systems, and smart contract security analysis to decentralized application development, blockchain-IoT integration, and trusted data validation, supporting the translation of research ideas into secure, verifiable, and field-ready decentralized solutions.</p>
@@ -358,8 +389,8 @@
                 </div>
               </article>
 
-              <article class="lab-slide" data-fit="contain" data-thumb="assets/img/labs/thumbs/cyber-range.webp" aria-roledescription="slide" aria-label="11 of 13: Cyber Range">
-                <div class="lab-slide__media"><img src="assets/img/labs/cyber-range.webp" alt="Cyber Range laboratory" width="1600" height="570" loading="lazy"></div>
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/cyber-range.webp?v=20260930" aria-roledescription="slide" aria-label="11 of 13: Cyber Range">
+                <div class="lab-slide__media"><img src="assets/img/labs/cyber-range.webp?v=20260930" alt="Cyber Range laboratory" width="1408" height="768" loading="lazy"></div>
                 <div class="lab-slide__body">
                   <h3 class="lab-slide__name">Cyber Range</h3>
                   <p class="lab-slide__desc">A cybersecurity simulation and training environment that supports AI-enabled cyber defence, threat intelligence, attack simulation, and security operations to strengthen digital resilience.</p>
@@ -367,9 +398,8 @@
                 </div>
               </article>
 
-              <article class="lab-slide" data-fit="contain" data-thumb="assets/img/labs/thumbs/xiot.webp" aria-roledescription="slide" aria-label="12 of 13: xIoT">
-                <!-- TODO: replace with a photo of the actual MMU xIoT lab — the current image is third-party (Phosphorus) marketing material. -->
-                <div class="lab-slide__media"><img src="assets/img/labs/xiot.webp" alt="Extended IoT Security Research (xIoT) laboratory" width="1600" height="711" loading="lazy"></div>
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/xiot.webp?v=20260930" aria-roledescription="slide" aria-label="12 of 13: xIoT">
+                <div class="lab-slide__media"><img src="assets/img/labs/xiot.webp?v=20260930" alt="Extended IoT Security Research (xIoT) laboratory" width="1408" height="768" loading="lazy"></div>
                 <div class="lab-slide__body">
                   <h3 class="lab-slide__name lab-slide__name--as-is">xIoT</h3>
                   <p class="lab-slide__full">Extended IoT Security Research</p>
@@ -378,8 +408,8 @@
                 </div>
               </article>
 
-              <article class="lab-slide" data-fit="contain" data-thumb="assets/img/labs/thumbs/statlab.webp" aria-roledescription="slide" aria-label="13 of 13: StatLab">
-                <div class="lab-slide__media"><img src="assets/img/labs/statlab.webp" alt="Data Analysis Research (StatLab) laboratory" width="1406" height="606" loading="lazy"></div>
+              <article class="lab-slide" data-thumb="assets/img/labs/thumbs/statlab.webp?v=20260930" aria-roledescription="slide" aria-label="13 of 13: StatLab">
+                <div class="lab-slide__media"><img src="assets/img/labs/statlab.webp?v=20260930" alt="Data Analysis Research (StatLab) laboratory" width="1600" height="900" loading="lazy"></div>
                 <div class="lab-slide__body">
                   <h3 class="lab-slide__name">StatLab</h3>
                   <p class="lab-slide__full">Data Analysis Research</p>

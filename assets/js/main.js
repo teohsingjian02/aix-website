@@ -79,6 +79,7 @@
       const max = document.documentElement.scrollHeight - window.innerHeight;
       progress.style.transform = `scaleX(${max > 0 ? Math.min(1, y / max) : 0})`;
       toTop.classList.toggle('is-visible', y > window.innerHeight * 0.8);
+      if (y > window.innerHeight * 0.4) document.documentElement.classList.add('ebee-tip');
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
@@ -184,6 +185,100 @@
     document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
   }
 
+  /* ---------- Hero photo slider (below the header) ----------
+     Scanner-style transition: the next photo is revealed behind a soft moving edge
+     with a glowing beam, while the blurred "ambient" copy behind the hero cross-fades. */
+  function initHeroSlider() {
+    const root = $('[data-hero-slider]');
+    if (!root) return;
+    const stage = $('.hero-slider__stage', root);
+    const slides = $$('.hero-slide', root);
+    const ambient = $$('.hero__ambient span');
+    const dotsWrap = $('[data-hero-dots]', root);
+    const DURATION = 6000;
+    const TRANSITION = parseFloat(getComputedStyle(root).getPropertyValue('--hero-t')) * 1000 || 1200;
+    let i = 0, elapsed = 0, last = 0, hover = false, inView = true, settleTimer = 0;
+
+    const dots = slides.map((s, n) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'hero-slider__dot';
+      b.setAttribute('aria-label', `Show photo ${n + 1} of ${slides.length}`);
+      b.append(document.createElement('span'));
+      b.addEventListener('click', () => go(n));
+      dotsWrap.append(b);
+      return b;
+    });
+
+    // finish any transition still running (also used when the user clicks quickly)
+    const settle = () => {
+      clearTimeout(settleTimer);
+      slides.forEach(s => s.classList.remove('is-leaving', 'is-entering'));
+      root.classList.remove('is-sweeping');
+    };
+
+    const sync = () => {
+      slides.forEach((s, k) => s.setAttribute('aria-hidden', String(k !== i)));
+      dots.forEach((d, k) => { d.setAttribute('aria-current', String(k === i)); d.style.setProperty('--p', 0); });
+      ambient.forEach((a, k) => a.classList.toggle('is-active', k === i));
+    };
+
+    function go(n, dir) {
+      n = (n + slides.length) % slides.length;
+      if (n === i) return;
+      settle();
+      dir = dir || (n > i ? 'next' : 'prev');
+      const from = slides[i], to = slides[n];
+      $$('img', to).forEach(img => (img.loading = 'eager'));
+      root.classList.toggle('is-prev', dir === 'prev');
+      from.classList.remove('is-active');
+      from.classList.add('is-leaving');
+      to.classList.add('is-active', 'is-entering');
+      void root.offsetWidth; // restart the beam animation
+      root.classList.add('is-sweeping');
+      i = n; elapsed = 0;
+      sync();
+      settleTimer = setTimeout(settle, TRANSITION + 80);
+      // warm up the photo after this one
+      $$('img', slides[(n + 1) % slides.length]).forEach(img => (img.loading = 'eager'));
+    }
+
+    const tick = now => {
+      const dt = last ? Math.min(now - last, 100) : 0; last = now;
+      if (!hover && inView && !document.hidden) {
+        elapsed += dt;
+        dots[i].style.setProperty('--p', Math.min(1, elapsed / DURATION).toFixed(3));
+        if (elapsed >= DURATION) go(i + 1, 'next');
+      }
+      requestAnimationFrame(tick);
+    };
+
+    $('[data-hero-prev]', root).addEventListener('click', () => go(i - 1, 'prev'));
+    $('[data-hero-next]', root).addEventListener('click', () => go(i + 1, 'next'));
+    stage.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') hover = true; });
+    stage.addEventListener('pointerleave', () => { hover = false; });
+    root.addEventListener('focusin', () => { hover = true; });
+    root.addEventListener('focusout', () => { hover = false; });
+    root.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(i + 1, 'next'); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(i - 1, 'prev'); }
+    });
+
+    // swipe on touch screens
+    let sx = null, sy = null;
+    stage.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') { sx = e.clientX; sy = e.clientY; } });
+    stage.addEventListener('pointerup', e => {
+      if (sx === null) return;
+      const dx = e.clientX - sx, dy = e.clientY - sy;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) go(i + (dx < 0 ? 1 : -1), dx < 0 ? 'next' : 'prev');
+      sx = sy = null;
+    });
+
+    new IntersectionObserver(([en]) => { inView = en.isIntersecting; }, { threshold: 0.2 }).observe(root);
+    sync();
+    requestAnimationFrame(tick);
+    window.addEventListener('load', () => $$('img', slides[1]).forEach(img => (img.loading = 'eager')), { once: true });
+  }
+
   /* ---------- Hero title: decode / scramble effect ---------- */
   function initScramble() {
     const GLYPHS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>/#%&*';
@@ -218,6 +313,8 @@
   /* ---------- Reveal on scroll ---------- */
   function initReveal() {
     const items = $$('[data-reveal]');
+    // the hero animates in on load, including anything just below the fold
+    $$('.hero [data-reveal]').forEach(i => i.classList.add('is-visible'));
     if (!('IntersectionObserver' in window)) { items.forEach(i => i.classList.add('is-visible')); return; }
     const io = new IntersectionObserver(entries => {
       entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); } });
@@ -419,6 +516,7 @@
     initSmoothLinks();
     initNav();
     initNetwork();
+    initHeroSlider();
     initScramble();
     initReveal();
     initCounters();
