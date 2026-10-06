@@ -114,7 +114,7 @@
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     const hero = canvas.closest('.hero');
-    const COLORS = ['63,224,255', '61,139,255', '255,49,49'];
+    const COLORS = ['63,224,255', '61,139,255', '239,79,145'];
     let w = 0, h = 0, nodes = [], raf = 0, running = false;
     const mouse = { x: -9999, y: -9999 };
 
